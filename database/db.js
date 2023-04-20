@@ -1,7 +1,9 @@
 import { MongoClient } from 'mongodb';
 const Connection = async () => {
   try {
-    let con = new MongoClient('mongodb://0.0.0.0:27017');
+    let con = new MongoClient(
+      'mongodb+srv://root:root@cluster0.dzjjnon.mongodb.net/test'
+    );
     let monConnect = await con.connect();
     let dbConnect = await monConnect.db('user');
     let collection = await dbConnect.collection('vloggers');
