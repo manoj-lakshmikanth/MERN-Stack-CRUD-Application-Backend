@@ -7,6 +7,9 @@ app.use(cors());
 app.use(express.json());
 app.use('/', Routes);
 Connection();
+app.get('/check', async (req, res) => {
+  res.send('working');
+});
 app.listen(8000, console.log('server is live'));
 // import express from 'express';
 // import Connection from './database/db.js';
