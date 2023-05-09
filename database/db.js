@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 const Connection = async () => {
   try {
     let con = new MongoClient(
-      'mongodb+srv://root:root@cluster0.dzjjnon.mongodb.net/test'
+      'mongodb+srv://root:root@cluster0.dzjjnon.mongodb.net/'
     );
     let monConnect = await con.connect();
     let dbConnect = await monConnect.db('user');
